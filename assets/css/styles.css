@@ -1,36 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
-
-body{
-	margin: 0;
+*{
 	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif, serif;
     overflow: hidden;
-    background: url(../images/bg.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-}
-
-.main-container{
-    margin-top: 30%;
 
 }
+
 
 
 .analog{
 	position: relative;
+	width: 600px;
+	height: 600px;
 	overflow: hidden;
-	/* border-radius: 999px; */
-	height: 400px;
-	width: 500px;
-    /* transform: scale(); */
+	border-radius: 999px;
+	/* border: 10px solid #111; */
+	background:url(../images/clock3.png);
+    margin-top: 24%;
+    left: 50%; 
     transform: translate(-50%, -50%);
-	/* background: url(../images/clock3.png) no-repeat ; */
-    background-position: center;
-
-
 }
 
 .analog:after{
@@ -38,8 +28,149 @@ body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	/* background: url(../images/clock3.png) no-repeat; */
-    background-size: cover;
-    background-position: center;
-    /* transform: scale(1.2) */
+	top: 0;
+	left: 0;
+    
+}
+
+.analog:before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	background-color: rgb(19, 139, 219);
+	border-radius: 50%;
+}
+
+.clock{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 18px;
+}
+
+.clock:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 15px;
+	background-color: rgb(19, 139, 219);
+}
+
+.hour1{
+	transform: rotate(30deg);
+}
+.hour1 div{
+	transform: rotate(-30deg);
+}
+
+.hour2{
+	transform: rotate(60deg);
+}
+.hour2 div{
+	transform: rotate(-60deg);
+}
+
+.hour3{
+	transform: rotate(90deg);
+}
+.hour3 div{
+	transform: rotate(-90deg);
+}
+
+.hour4{
+	transform: rotate(120deg);
+}
+.hour4 div{
+	transform: rotate(-120deg);
+}
+
+.hour5{
+	transform: rotate(150deg);
+}
+.hour5 div{
+	transform: rotate(-150deg);
+}
+
+.hour6{
+	transform: rotate(180deg);
+}
+.hour6 div{
+	transform: rotate(-180deg);
+}
+
+.hour7{
+	transform: rotate(210deg);
+}
+.hour7 div{
+	transform: rotate(-210deg);
+}
+
+.hour8{
+	transform: rotate(240deg);
+}
+.hour8 div{
+	transform: rotate(-240deg);
+}
+
+.hour9{
+	transform: rotate(270deg);
+}
+.hour9 div{
+	transform: rotate(-270deg);
+}
+
+.hour10{
+	transform: rotate(300deg);
+}
+.hour10 div{
+	transform: rotate(-300deg);
+}
+
+.hour11{
+	transform: rotate(330deg);
+}
+.hour11 div{
+	transform: rotate(-330deg);
+}
+
+.hand{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.hand div{
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgb(19, 139, 219);
+}
+
+.hour{
+    height: 25%;
+    width: 6px;
+}
+
+.second{
+	width: 1px;
+	height: 35%;
+}
+.minute{
+	height: 33%;
+	width: 3px;	
 }
