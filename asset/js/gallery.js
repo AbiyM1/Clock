@@ -1,17 +1,11 @@
+$(".carousel").on("click", function (e) {
+    console.log("This works")
+    var currentImg = document.querySelector(".carousel-item.active").querySelector("img");
+        // urlSwap();
 
-// var btns = document.querySelector('img')
-
-// btns.addEventListener('click', urlSwap())
-
-// function urlSwap() {
-//     btns.src = "https://picsum.photos/1920/1080"
-//     console.log("swapped")
-// }
-
-// setInterval (imageSwap, 5000);
+        fetch('https://picsum.photos/1280/720?grayscale')
+            .then(response => response.url)
+            .then(data => currentImg.src = data);
+    });
 
 
-// function imageSwap() {
-//     document.querySelector('img').src = 'https://picsum.photos/1920/1080?blur2'
-//     // document.getElementById('load-anim').style.display = 'none'
-// }
